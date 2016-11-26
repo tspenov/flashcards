@@ -1,0 +1,10 @@
+<div class="flashcard" id="question">
+  <%= markdown(@card.question) -%>
+</div>
+
+<strong>Answer:</strong>
+<button id="reveal-answer" class="btn btn-info">Reveal Answer</button>
+
+<div class="flashcard" id="answer">
+  <%= markdown(@card.answer) %>
+</div>
