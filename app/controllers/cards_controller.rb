@@ -20,6 +20,12 @@ class CardsController < ApplicationController
     @card = Card.find(params[:id])
   end
 
+  def preview
+    question_html = MarkdownService.new(params[:question]).call
+
+    render json: { question_html: question_html }
+  end
+
   private
 
   def card_params
