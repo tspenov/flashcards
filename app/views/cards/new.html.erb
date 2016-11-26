@@ -1,7 +1,23 @@
-<%= form_for :card, url: {action: "create"} do |f| %>
-  <div class="form-group">
-    <%= f.label :question, class: "control-label" %>
-    <%= f.text_area :question, class: 'form-control', size: "100x12" %>
+<ul class="nav nav-tabs" role="tablist" id="cards_tab">
+  <li class="nav-item">
+    <a class="nav-link active"  href="#write" role="tab">Write</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#preview" role="tab">Preview</a>
+  </li>
+</ul>
+
+<%= form_for :card, class: "card_form", url: {action: "create"} do |f| %>
+  <div class="tab-content">
+    <div id="write" class="tab-pane active" role="tabpanel">
+      <div class="form-group">
+        <%= f.label :question, class: "control-label" %>
+        <%= f.text_area :question, id: "question_id", class: 'form-control', size: "100x12" %>
+      </div>
+    </div>
+
+    <div id="preview" class="tab-pane" role="tabpanel">
+    </div>
   </div>
 
   <div class="form-group">

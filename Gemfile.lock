@@ -43,6 +43,7 @@ GEM
     ast (2.3.0)
     autoprefixer-rails (6.5.3)
       execjs
+    awesome_print (1.7.0)
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
@@ -131,6 +132,7 @@ GEM
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     redcarpet (3.3.4)
+    rouge (2.0.7)
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -205,6 +207,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   babel-transpiler
   bootstrap (~> 4.0.0.alpha5)
   byebug
@@ -217,6 +220,7 @@ DEPENDENCIES
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-assets-tether (>= 1.1.0)!
   redcarpet
+  rouge
   rspec-rails
   rubocop
   rubocop-rspec
