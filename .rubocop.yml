@@ -1,0 +1,42 @@
+# Run 'gem install rubocop-rspec' if you want to use rubocop-rspec
+require: rubocop-rspec
+
+AllCops:
+  # Exclude anything that isn't really part of our code.
+  # rails_helper is excluded because it's full of solecisms, but it's mostly
+  # generated code and copy-and-pasted snipets from READMEs.
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - '**/vendor/**/*'
+    - '**/db/**/*'
+    - '**/bin/**/*'
+    - '**/*.gemspec'
+    - '**/tmp'
+    - '**/bower_components'
+    - '**/node_modules'
+
+
+# Run rails cops
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Description: >-
+    Commonly used screens these days easily fit more than 80 characters.
+  Max: 120
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/DescribedClass:
+  Enabled: false
+
+Style/Documentation:
+  Description: >-
+    Check with yard instead.
+  Enabled: false
+
+
+
