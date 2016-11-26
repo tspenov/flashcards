@@ -21,9 +21,7 @@ class CardsController < ApplicationController
   end
 
   def preview
-    ap params
     question_html = MarkdownService.new(params[:question]).call
-    ap question_html
 
     render json: { question_html: question_html }
   end
